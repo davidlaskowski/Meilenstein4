@@ -4,6 +4,12 @@
 <meta charset="UTF-8">
 	<title>Home</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">	
+	<style>
+		input{
+			border:none;
+			max-width: 150px;
+		}
+	</style>
 </head>
 <body>	
 	<div class="container">
@@ -11,10 +17,6 @@
 		<?php
 		include 'csvIo.php';
 		$csvIo = new csvIo("data.csv");
-		
-		if (isset($_POST["mountain"]) && !empty($_POST["mountain"])) {
-			$csvIo->add($_POST['mountain']);
-		}
 		$csvIo->printData();
 		?>
 		
@@ -26,4 +28,6 @@
 	
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 	
+
+
 </body>

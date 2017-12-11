@@ -7,30 +7,30 @@
 </head>
 <body>
 	<div class="container">
-		<form method="post" action="index.php">
+		<form method="post" action="success.php">
 			<div class="form-group">
 				<label for="id">Id:</label>
-				<input name="mountain[]" type="number" class="form-control" id="id">
+				<input name="new[]" type="number" class="form-control" id="id">
 			</div>
 			<div class="form-group">
 				<label for="name">Name:</label>
-				<input name="mountain[]" name="type="text" class="form-control" id="name">
+				<input name="new[]" name="type="text" class="form-control" id="name">
 			</div>
 			<div class="form-group">
 				<label for="height">Height:</label>
-				<input name="mountain[]" type="number" class="form-control" id="height">
+				<input name="new[]" type="number" class="form-control" id="height">
 			</div>
 			<div class="form-group">
 				<label for="latitude">Latitude:</label>
-				<input name="mountain[]" type="number" class="form-control" id="latitude">
+				<input name="new[]" type="number" class="form-control" id="latitude">
 			</div>
 			<div class="form-group">
 				<label  for="longitude">Longitude:</label>
-				<input name="mountain[]" type="number" class="form-control" id="longitude">
+				<input name="new[]" type="number" class="form-control" id="longitude">
 			</div>
 			<div class="form-group">
 				<label for="ascent">Ascent:</label>
-				<input name="mountain[]" type="number" class="form-control" id="ascent">
+				<input name="new[]" type="number" class="form-control" id="ascent">
 			</div>
 			<button type="submit" class="btn btn-default">Submit</button>
 		</form>
