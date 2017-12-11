@@ -76,8 +76,20 @@ class Calendar {
 			$cellContent = null;
 		}
 
+
+
 		return '<li id="li-'.$this->curDate.'" class="'.($cellNumber%7==1?' start ':($cellNumber%7==0?' end ':' ')).
-                ($cellContent==null?'mask':'').'">'.$cellContent.'</li>';
+                ($cellContent==null?'mask':'').$this->_todayClass($this->curDate).'">'.$cellContent.'</li>';
+	}
+
+	private function _todayClass($date) {
+		$today = date('Y-m-d');
+
+		if($today == $date) {
+			return 'today ';
+		} else {
+			return '';
+		}
 	}
 
 	private function _createNavi() {
@@ -90,6 +102,7 @@ class Calendar {
 					'<a class="prev material-icons" href="'.$this->naviHref.'?month='.sprintf('%02d', $preMonth).'&year='.$preYear.'">keyboard_arrow_left</a>'.
 					'<a class="prev pyear material-icons" href="'.$this->naviHref.'?month='.sprintf('%02d', $this->curMonth).'&year='.($this->curYear - 1).'">arrow_back</a>'.
 						'<a class="title">'.date('Y M', strtotime($this->curYear.'-'.$this->curMonth.'-1')).'</a>'.
+					'<a class="next today material-icons" href="'.$this->naviHref.'?month='.sprintf('%02d', date('m')).'&year='.date('Y').'">today</a>'.
 					'<a class="next material-icons" href="'.$this->naviHref.'?month='.sprintf('%02d', $nextMonth).'&year='.$nextYear.'">keyboard_arrow_right</a>'.
 					'<a class="next nyear material-icons" href="'.$this->naviHref.'?month='.sprintf('%02d', $this->curMonth).'&year='.($this->curYear + 1).'">arrow_forward</a>'.
 				'</div>';
