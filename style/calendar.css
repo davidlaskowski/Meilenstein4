@@ -1,4 +1,3 @@
-/*******************************Calendar Top Navigation*********************************/
 div#calendar{
   margin: 0px auto;
   padding: 0px;
@@ -43,6 +42,7 @@ div#calendar div.header a.prev:hover, div#calendar div.header a.next:hover {
 div#calendar div.header a.title{
     color: grey;
     font-size:18px;
+    padding-right: 40px;
 }
  
  
@@ -59,10 +59,15 @@ div#calendar div.header a.next{
 	padding-top: 6px;
     right: 180px;
 }
+div#calendar div.header a.today{
+    padding-top: 6px;
+    right: 230px;
+}
 
 div#calendar div.header a.nyear{
     right: 10px;
 }
+
  
 
 /*******************************Calendar Content Cells*********************************/
@@ -104,6 +109,7 @@ div#calendar ul.dates{
 }
  
 /** overall width = width+padding-right**/
+
 div#calendar ul.dates li{
     margin: 0px;
     padding: 0px;
@@ -120,6 +126,11 @@ div#calendar ul.dates li{
     color: grey;
     text-align:center;
     border: 1px solid lightgrey;
+}
+
+div#calendar ul.dates li.today{
+    background-color: #4285f4;
+    color: white;
 }
  
 :focus{
