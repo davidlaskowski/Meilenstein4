@@ -7,7 +7,7 @@
 </head>
 <body>
 	<div class="container">
-		<form method="post" action="success.php">
+		<form method="post" action="index.php">
 			<div class="form-group">
 				<label for="id">Id:</label>
 				<input name="new[]" type="number" class="form-control" id="id">

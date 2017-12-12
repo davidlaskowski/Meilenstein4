@@ -52,7 +52,7 @@ class csvIo{
 	}
 
 	function printData(){
-		echo "<form action='success.php' method='post'><table class='table'>";
+		echo "<form action='index.php' method='post'><table class='table'>";
 		echo "<tr><th>Id</th><th>Name</th><th>Höhe</th><th>Longitude</th><th>Latitude</th><th>Ascent</th></tr>";
 		for($i=0; $i < count($this->csvData); $i++){
 			// if($i == 0){
@@ -65,7 +65,7 @@ class csvIo{
 			// }else{
 				echo "<tr>";
 				for ($c=0; $c < count($this->csvData[$i]); $c++) {
-					echo "<td><input type='text' name='values_".$i."_".$c."' value='".$this->csvData[$i][$c]."' /></td>";
+					echo "<td><input type='text' name='values_".$i."_".$c."' value='".strip_tags($this->csvData[$i][$c])."' /></td>";
 				}
 				echo "<td><input class='btn btn-primary' type='submit' name='delete_".$i."' value='Delete'></td><td><input id='edit'".$i." class='btn btn-primary' type='submit' name='edit_".$i."' value='Edit'";
 
