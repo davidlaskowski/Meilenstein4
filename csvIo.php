@@ -67,7 +67,7 @@ class csvIo{
 				for ($c=0; $c < count($this->csvData[$i]); $c++) {
 					echo "<td><input type='text' name='values_".$i."_".$c."' value='".strip_tags($this->csvData[$i][$c])."' /></td>";
 				}
-				echo "<td><input class='btn btn-primary' type='submit' name='delete_".$i."' value='Delete'></td><td><input id='edit'".$i." class='btn btn-primary' type='submit' name='edit_".$i."' value='Edit'";
+				echo "<td><input class='btn btn-primary' type='submit' name='delete_".$i."' value='Delete'></td><td><input id='edit'".$i." class='btn btn-primary' type='submit' name='edit_".$i."' value='Save'";
 
 				echo "</tr>";
 			// }
